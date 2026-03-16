@@ -11,7 +11,7 @@ const Navbar = () => {
 
   return (
     <>
-      <header className="h-dvh relative z-10">
+       <header className="h-dvh relative z-10">
         <div className="header-type md:flex md:justify-between items-center flex justify-around md:px-20 px-5 py-4 fixed md:w-full w-full">
           <div className="logo-bg md:flex md:justify-between items-center  w-full">
             <a href="#">
@@ -20,16 +20,16 @@ const Navbar = () => {
             {/* Desktop menu */}
             <ul className="hidden md:flex gap-8 text-[18px] font-light">
               <li className="relative cursor-pointer text-white after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full">
-                About
+                <a href="#about">About</a>
               </li>
               <li className="relative cursor-pointer text-white after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full">
-                Products
+                <a href="#services">Services</a>
               </li>
               <li className="relative cursor-pointer text-white after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full">
-                Services
+                <a href="#clients">Clients</a>
               </li>
               <li className="relative cursor-pointer text-white after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full">
-                Contact us
+                <a href="#contact-item">Contact us</a>
               </li>
             </ul>
           </div>
@@ -64,18 +64,19 @@ const Navbar = () => {
                 About
               </a>
             </li>
-            <li className="py-3 text-2xl">
-              <a href="#products" onClick={() => setOpen(false)}>
-                Products
-              </a>
-            </li>
+            
             <li className="py-3 text-2xl">
               <a href="#services" onClick={() => setOpen(false)}>
                 Services
               </a>
             </li>
+            <li className="py-3 text-2xl">
+              <a href="#clients" onClick={() => setOpen(false)}>
+                Clients
+              </a>
+            </li>
             <li className="py-3 text-2xl bg-blue-900 px-5 w-full text-center">
-              <a href="#contact" onClick={() => setOpen(false)}>
+              <a href="#contact-item" onClick={() => setOpen(false)}>
                 Contact us
               </a>
             </li>
@@ -84,8 +85,9 @@ const Navbar = () => {
 
         <Background />
       </header>
+    
     </>
-  );
+     );
 };
 
 export default Navbar;

@@ -1,13 +1,12 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import Slide_1 from '../assets/hoarding.jpg';
-import Slide_2 from '../assets/hoarding-1.jpg';
-import Slide_3 from '../assets/Volvo Unboxing Cover.png';
-import Slide_4 from '../assets/volvo-add.png';
+import Slide_1 from '../assets/img1.jpg';
+import Slide_2 from '../assets/img2.jpg';
+import Slide_3 from '../assets/img3.jpg';
 
 
 
-const images = [Slide_1, Slide_2, Slide_3, Slide_4];
+const images = [Slide_1, Slide_2, Slide_3];
 
 const ScrollImage = () => {
   const targetRef = useRef(null);
@@ -20,7 +19,7 @@ const ScrollImage = () => {
   const x = useTransform(
     scrollYProgress,
     [0, 1],
-    [0, -((images.length - 1) * window.innerWidth)] // scroll distance
+    [0, -((images.length - 0.2) * window.innerWidth)] // scroll distance
   );
 
   return (
